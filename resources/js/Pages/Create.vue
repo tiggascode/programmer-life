@@ -3,6 +3,11 @@ import Layout from "@/Components/Layout.vue";
 
 import { useForm } from "@inertiajs/inertia-vue3";
 
+defineProps({
+    isAuth: {
+        type: Boolean,
+    },
+});
 let form = useForm({
     title: "",
     body: "",
@@ -19,7 +24,7 @@ let submit = () => {
 </script>
 
 <template>
-    <Layout>
+    <Layout :isAuth="isAuth">
         <section class="text-center pt-6 mt-10">
             <h1 class="font-bold text-4xl">Create Post</h1>
 

@@ -21,7 +21,7 @@ class SessionController extends Controller
      */
     public function create()
     {
-        return Inertia::render('Auth/TheLogin');
+        return Inertia::render('Auth/TheLogin', ['isAuth' => Auth::check()]);
     }
 
     /**

@@ -16,9 +16,9 @@ Route::prefix('posts')->group(function () {
     Route::get('/{post}', [PostController::class, 'show']);
 });
 
-Route::middleware(['auth', AdminMiddleware::class])->prefix('posts')->group(function () {
+Route::middleware(['auth', AdminMiddleware::class])->group(function () {
     Route::get('/create', [PostController::class, 'create']);
-    Route::post('/', [PostController::class, 'store']);
+    Route::post('/posts', [PostController::class, 'store']);
 
 });
 

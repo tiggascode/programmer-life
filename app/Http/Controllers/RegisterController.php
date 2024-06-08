@@ -41,7 +41,7 @@ class RegisterController extends Controller
      */
     public function create()
     {
-        return Inertia::render('Auth/TheRegister');
+        return Inertia::render('Auth/TheRegister', ['isAuth' => Auth::check()]);
     }
 
     /**

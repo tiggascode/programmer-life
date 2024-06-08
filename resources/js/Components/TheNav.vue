@@ -23,6 +23,7 @@ defineProps({
             <Link href="/register">Sing Up</Link>
             <Link href="/login">Login</Link>
         </div>
+        <div v-if="isAuth" class="space-x-6 font-bold"></div>
     </nav>
 </template>
 

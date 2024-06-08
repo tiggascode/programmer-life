@@ -53,7 +53,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        return Inertia::render('Create');
+        return Inertia::render('Create', ['isAuth' => Auth::check()]);
     }
 
 
@@ -62,7 +62,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        return Inertia::render('Show', ['post' => $post]);
+        return Inertia::render('Show', ['post' => $post, 'isAuth' => Auth::check()]);
     }
 
     /**
